@@ -47,7 +47,7 @@ class App extends Component {
         return (
             <div className="App">
                 <FetchForm onSubmit={this.fetchData} />
-                {visibleData.length > 0 &&
+                {this.state.fetchedData.length > 0 &&
                 <FilterInput onSubmit={this.filter} />}
                 <div>
                     {visibleData.map(({ id , title, image, rating }) => (
@@ -58,7 +58,7 @@ class App extends Component {
                     ))}
                 </div>
 
-                <Stats data={visibleData} />
+                {visibleData.length > 0 && <Stats data={visibleData} />}
 
             </div>
         );
