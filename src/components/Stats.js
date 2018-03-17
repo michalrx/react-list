@@ -28,7 +28,7 @@ class Stats extends Component {
         return (
             <div>
                 {ratingNames.map(item => (
-                    <div key={item}>{item}: {stats[item]}</div>
+                    <div key={item}>{item}: {stats[item] || 0}</div>
                 ))}
             </div>
         );
