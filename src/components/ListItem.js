@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Stats from './Stats';
 
 class ListItem extends Component {
     render() {
