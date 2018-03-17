@@ -23,11 +23,13 @@ class Stats extends Component {
     render() {
         const stats = getStats(this.props.data)
 
+        console.log(stats)
+
         return (
             <div>
-                {/*stats.map(item => (
-                    <div key={item}>{item}: 0</div>
-                ))*/}
+                {ratingNames.map(item => (
+                    <div key={item}>{item}: {stats[item]}</div>
+                ))}
             </div>
         );
     }
